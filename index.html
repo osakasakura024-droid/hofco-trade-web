@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOFCO TRADE | 国际大宗农产品与期货信息</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
 
+  <!-- 顶部导航 -->
+  <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl font-black tracking-wider text-amber-500">HOFCO</span>
+        <span class="text-sm border-l border-slate-700 pl-3 text-slate-400">合粮国际贸易 · 农产品研究</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#quotes" class="hover:text-amber-400 transition">大宗看盘</a>
+        <a href="#chart" class="hover:text-amber-400 transition">走势分析</a>
+        <a href="#market-notes" class="hover:text-amber-400 transition">现货与研报</a>
+        <a href="#contact" class="hover:text-amber-400 transition">业务联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 头部 Banner -->
+  <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-amber-950 text-white py-14 px-4">
+    <div class="max-w-7xl mx-auto text-center md:text-left md:flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">国际大宗农产品现货贸易 & 期货情报</h1>
+        <p class="text-slate-300 max-w-2xl text-sm md:text-base leading-relaxed">
+          聚焦 CBOT 大豆、玉米、白糖及油脂油料产业链。提供全球基本面跟踪、基差分析与现货供应链服务。
+        </p>
+      </div>
+      <div class="mt-6 md:mt-0 flex gap-3 justify-center">
+        <a href="#chart" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition shadow-md">实时走势</a>
+        <a href="#contact" class="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition">业务合作</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心重点品种卡片 -->
+  <section id="quotes" class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- CBOT 大豆 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 hover:shadow-md transition">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">CBOT : ZS</span>
+          <span class="text-xs text-slate-400">美豆主连</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">CBOT 黄大豆</h3>
+        <p class="text-xs text-slate-500 mt-1">关注南美产区天气升水、美豆出口检验周报及压榨利润率。</p>
+      </div>
+
+      <!-- CBOT 玉米 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 hover:shadow-md transition">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-yellow-100 text-yellow-800">CBOT : ZC</span>
+          <span class="text-xs text-slate-400">美玉米主连</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">CBOT 玉米</h3>
+        <p class="text-xs text-slate-500 mt-1">跟踪饲料与乙醇消费配额、黑海走廊与南美出口竞争基本面。</p>
+      </div>
+
+      <!-- 原糖期货 -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 hover:shadow-md transition">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-100 text-blue-800">ICE : SB</span>
+          <span class="text-xs text-slate-400">11号原糖主连</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">ICE 原糖 / 白糖</h3>
+        <p class="text-xs text-slate-500 mt-1">监控巴西中南部压榨进度、印度/泰国糖产量政策及国际运费波动。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 实时走势图表嵌入 (TradingView 官方免费 Widget) -->
+  <section id="chart" class="max-w-7xl mx-auto px-4 py-4">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold text-slate-900">CBOT 农产品交互行情看板</h2>
+        <span class="text-xs text-slate-400">数据源：CBOT / TradingView 实时数据</span>
+      </div>
+      <!-- TradingView Widget -->
+      <div class="h-[520px] w-full">
+        <iframe 
+          title="CBOT Chart"
+          src="https://s.tradingview.com/widgetembed/?symbol=CBOT%3AZS1%21&interval=D&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=[]&theme=light&style=1&timezone=Asia%2FShanghai" 
+          class="w-full h-full border-0 rounded-lg">
+        </iframe>
+      </div>
+      <p class="text-xs text-slate-400 mt-3 text-right">可在图表左上角搜索框切换品种：如输入 ZC1!（玉米）、SB1!（原糖）</p>
+    </div>
+  </section>
+
+  <!-- 现货报价与研报发布 -->
+  <section id="market-notes" class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 市场研报板块 (左侧 2 列) -->
+      <div class="md:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">最新贸易要闻与基差观点</h2>
+        <div class="space-y-4">
+          <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
+            <div class="flex justify-between text-xs text-slate-400 mb-1">
+              <span class="text-amber-700 font-medium">大豆基差分析</span>
+              <span>2026-10-09</span>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm">进口大豆到港节奏与沿海油厂提货基差简析</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              近期华北及沿海主要油厂压榨开机率保持稳定，近月到港巴西豆基差报价偏强，关注四季度美豆贴水变化与下游提货节奏。
+            </p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-lg border border-slate-100">
+            <div class="flex justify-between text-xs text-slate-400 mb-1">
+              <span class="text-yellow-700 font-medium">玉米市场周评</span>
+              <span>2026-10-08</span>
+            </div>
+            <h4 class="font-bold text-slate-800 text-sm">新季玉米收储与产销区现货购销跟踪</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              东北产区新粮陆续收割上市，港口集港量平稳回升，深加工企业根据门前到货量灵活调整收购底价。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 企业简介与联系方式 (右侧 1 列) -->
+      <div id="contact" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">关于我们</h2>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            合粮国际贸易（HOFCO TRADE）专注于粮油大宗农产品供应链贸易、进出口清关、港口基差交易及套期保值风险管理。
+          </p>
+          <div class="space-y-2 text-xs text-slate-700">
+            <p><strong>主营品种：</strong>黄大豆、饲用玉米、原糖、植物油</p>
+            <p><strong>业务咨询：</strong>contact@hofcotrade.com</p>
+            <p><strong>服务模式：</strong>现货直销、基差合同、远期锁价</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 text-center">
+          <span class="inline-block bg-slate-100 text-slate-600 px-3 py-1.5 rounded text-xs font-medium w-full">
+            欢迎现货客商与产业伙伴洽谈合作
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-6 text-center border-t border-slate-800">
+    <p>© 2026 HOFCO TRADE (合粮贸易). All Rights Reserved.</p>
+    <p class="mt-1 text-slate-500">本站所含期货行情与分析仅供大宗现货贸易参考，不构成直接投资依据。</p>
+  </footer>
+
+</body>
+</html>
